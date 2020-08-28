@@ -12,8 +12,8 @@ def get_next_date(target):
     return d
 
 
-def format_url(event, theme, day, time):
-    year, month, day = (day.year, day.month, day.day)
+def format_url(event, theme, date, time):
+    year, month, day = (date.year, date.month, date.day)
     hour, minute, second = [time[i: i + 2] for i in range(0, len(time), 2)]
     domain = "https://www.timeanddate.com"
     params = f"msg={event}%20Deadline&p0=250&ud=1&year={year}&month={month}&day={day}&hour={hour}&min={minute}&sec={second}"
